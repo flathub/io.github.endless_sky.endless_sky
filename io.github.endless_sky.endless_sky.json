@@ -26,8 +26,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://downloads.sourceforge.net/project/scons/scons/3.1.1/scons-3.1.1.tar.gz",
-          "sha256": "4cea417fdd7499a36f407923d03b4b7000b0f9e8fd7b31b316b9ce7eba9143a5"
+          "url": "https://downloads.sourceforge.net/project/scons/scons/3.1.2/scons-3.1.2.tar.gz",
+          "sha256": "7801f3f62f654528e272df780be10c0e9337e897650b62ddcee9f39fde13f8fb"
         }
       ]
     },
@@ -44,13 +44,13 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/endless-sky/endless-sky/archive/v0.9.10.tar.gz",
-          "sha256": "58f2e405e171be8426004216df4df7bb3a2792a507a5d01f77a0f02346332f6f"
+          "url": "https://github.com/endless-sky/endless-sky/archive/v0.9.12.tar.gz",
+          "sha256": "31f76ac11666415478678d924174d43a620a7fd1093e95131776aed12b912eb4"
         },
         {
           "type": "archive",
-          "url": "https://github.com/endless-sky/endless-sky-high-dpi/archive/v0.9.10.tar.gz",
-          "sha256": "f12446fbaf00551d494d62506ecfb34c5603ded7e6b30cff6825683732b926c1",
+          "url": "https://github.com/endless-sky/endless-sky-high-dpi/archive/v0.9.12.tar.gz",
+          "sha256": "89fac28682b3dd3292f29436b6f99be6834c30b844a6bb543922e1152ba7e1b9",
           "dest": "endless-sky-high-dpi"
         },
         {
@@ -59,10 +59,6 @@
           "commands": [
             "exec /app/games/endless-sky -r /app/share/games/endless-sky"
           ]
-        },
-        {
-          "type": "file",
-          "path": "endless-sky.appdata.xml"
         }
       ]
     }
