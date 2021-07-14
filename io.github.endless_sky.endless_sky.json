@@ -44,13 +44,13 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/endless-sky/endless-sky/archive/v0.9.12.tar.gz",
-          "sha256": "31f76ac11666415478678d924174d43a620a7fd1093e95131776aed12b912eb4"
+          "url": "https://github.com/endless-sky/endless-sky/archive/v0.9.14.tar.gz",
+          "sha256": "6c22571b5398a18297aa7410890c319b5cb292a833889b4e7c0cd94d831f29af"
         },
         {
           "type": "archive",
-          "url": "https://github.com/endless-sky/endless-sky-high-dpi/archive/v0.9.12.tar.gz",
-          "sha256": "89fac28682b3dd3292f29436b6f99be6834c30b844a6bb543922e1152ba7e1b9",
+          "url": "https://github.com/endless-sky/endless-sky-high-dpi/archive/v0.9.14.tar.gz",
+          "sha256": "df1105b58968cf33d9c61861b9eea4e8ada0712d0495acd72a694a39592a12f4",
           "dest": "endless-sky-high-dpi"
         },
         {
@@ -59,10 +59,6 @@
           "commands": [
             "exec /app/games/endless-sky -r /app/share/games/endless-sky"
           ]
-        },
-	{
-          "type": "patch",
-          "path": "0001-fix-Add-missing-string-include.patch"
         }
       ]
     }
