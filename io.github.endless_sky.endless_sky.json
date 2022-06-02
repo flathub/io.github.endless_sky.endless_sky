@@ -1,7 +1,7 @@
 {
   "id": "io.github.endless_sky.endless_sky",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "20.08",
+  "runtime-version": "21.08",
   "sdk": "org.freedesktop.Sdk",
   "command": "endless-sky",
   "rename-desktop-file": "endless-sky.desktop",
@@ -36,6 +36,14 @@
     {
       "name": "endless-sky",
       "buildsystem": "simple",
+      "build-options": {
+        "env": {
+          "//": "These are needed for lto",
+          "AR": "/usr/bin/gcc-ar",
+          "NM": "/usr/bin/gcc-nm",
+          "RANLIB": "/usr/bin/gcc-ranlib"
+        }
+      },
       "build-commands": [
         "CPPPATH=/app/include python3 /app/bin/scons PREFIX=/app install -j $FLATPAK_BUILDER_N_JOBS",
         "install -Dm755 launcher /app/bin/endless-sky",
