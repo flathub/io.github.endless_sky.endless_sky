@@ -87,6 +87,10 @@
                     "commands": [
                         "exec /app/games/endless-sky -r /app/share/games/endless-sky"
                     ]
+                },
+                {
+                    "type": "patch",
+                    "path": "glew.patch"
                 }
             ]
         }
