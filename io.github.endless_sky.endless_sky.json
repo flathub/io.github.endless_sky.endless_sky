@@ -21,9 +21,8 @@
       "cleanup": [ "*" ],
       "buildsystem": "simple",
       "build-commands": [
-	"sed -e 's/bdist_wheel/bdist/g' -i SConstruct",
-        "python3 scripts/scons.py --include-dir= -j1",
-	"python3 setup.py install --prefix=/app --skip-build --install-data=/app/share"
+        "python3 Script/scons.py --include-dir= -j1",
+        "python3 setup.py install --prefix=/app --skip-build --install-data=/app/share"
       ],
       "sources": [
         {
