@@ -18,7 +18,9 @@
         "shared-modules/libmad/libmad.json",
         {
             "name": "scons",
-            "cleanup": [ "*" ],
+            "cleanup": [
+                "*"
+            ],
             "buildsystem": "simple",
             "build-commands": [
                 "sed -e 's/bdist_wheel/bdist/g' -i SConstruct",
@@ -38,10 +40,10 @@
             "buildsystem": "simple",
             "build-options": {
                 "env": {
-                "//": "These are needed for lto",
-                "AR": "/usr/bin/gcc-ar",
-                "NM": "/usr/bin/gcc-nm",
-                "RANLIB": "/usr/bin/gcc-ranlib"
+                    "//": "These are needed for lto",
+                    "AR": "/usr/bin/gcc-ar",
+                    "NM": "/usr/bin/gcc-nm",
+                    "RANLIB": "/usr/bin/gcc-ranlib"
                 }
             },
             "build-commands": [
@@ -54,7 +56,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/endless-sky/endless-sky/archive/v0.9.14.tar.gz",
+                    "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v0.9.14.tar.gz",
                     "sha256": "6c22571b5398a18297aa7410890c319b5cb292a833889b4e7c0cd94d831f29af",
                     "x-checker-data": {
                         "type": "anitya",
@@ -65,7 +67,7 @@
                 },
                 {
                     "type": "archive",
-                    "url": "https://github.com/endless-sky/endless-sky-high-dpi/archive/v0.9.14.tar.gz",
+                    "url": "https://github.com/endless-sky/endless-sky-high-dpi/archive/refs/tags/v0.9.14.tar.gz",
                     "sha256": "df1105b58968cf33d9c61861b9eea4e8ada0712d0495acd72a694a39592a12f4",
                     "dest": "endless-sky-high-dpi",
                     "x-checker-data": {
