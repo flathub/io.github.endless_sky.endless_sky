@@ -29,13 +29,7 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/scons/scons/archive/4.1.0.tar.gz",
-                    "sha512": "f79b86bb09783767b3872cfb8efb665372714a604af2aaf3adc66eee63d3afe27bc6b2aab83813743c83f71c81c800d42842e916501787ba402ce2726dda9b44",
-                    "x-checker-data": {
-                    "type": "anitya",
-                    "project-id": 4770,
-                    "stable-only": true,
-                    "url-template": "https://sourceforge.net/projects/scons/files/scons/$version/SCons-$version.tar.gz"
-                    }
+                    "sha512": "f79b86bb09783767b3872cfb8efb665372714a604af2aaf3adc66eee63d3afe27bc6b2aab83813743c83f71c81c800d42842e916501787ba402ce2726dda9b44"
                 }
             ]
         },
