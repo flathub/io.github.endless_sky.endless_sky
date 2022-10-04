@@ -1,0 +1,14 @@
+{
+    "name": "python3-scons",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"scons\" --no-build-isolation"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/1a/e1/7fad50e1baa7068e3e2382b11c4d00190238798d62bfa6bbfa8619c19f39/SCons-4.4.0-py3-none-any.whl",
+            "sha256": "cbbd73b83cf85f1aaaf986370359de1bbfd3af97a765cb3554734f6dcec734e1"
+        }
+    ]
+}

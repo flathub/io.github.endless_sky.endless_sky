@@ -1,7 +1,7 @@
 {
     "id": "io.github.endless_sky.endless_sky",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "21.08",
+    "runtime-version": "22.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "endless-sky",
     "rename-desktop-file": "endless-sky.desktop",
@@ -16,25 +16,7 @@
         "shared-modules/glu/glu-9.json",
         "shared-modules/glew/glew.json",
         "shared-modules/libmad/libmad.json",
-        {
-            "name": "scons",
-            "cleanup": [
-                "*"
-            ],
-            "buildsystem": "simple",
-            "build-commands": [
-                "sed -e 's/bdist_wheel/bdist/g' -i SConstruct",
-                "python3 scripts/scons.py --include-dir= -j1",
-                "python3 setup.py install --prefix=/app --skip-build --install-data=/app/share"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/scons/scons/archive/4.1.0.tar.gz",
-                    "sha512": "f79b86bb09783767b3872cfb8efb665372714a604af2aaf3adc66eee63d3afe27bc6b2aab83813743c83f71c81c800d42842e916501787ba402ce2726dda9b44"
-                }
-            ]
-        },
+		"python3-scons.json",
         {
             "name": "endless-sky",
             "buildsystem": "simple",
