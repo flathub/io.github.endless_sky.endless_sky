@@ -9,8 +9,7 @@
     "finish-args": [
         "--socket=pulseaudio",
         "--socket=wayland",
-        "--socket=fallback-x11",
-        "--share=ipc",
+        "--socket=x11",
         "--device=dri"
     ],
     "modules": [
