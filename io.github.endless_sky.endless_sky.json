@@ -1,7 +1,7 @@
 {
     "id": "io.github.endless_sky.endless_sky",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "21.08",
+    "runtime-version": "22.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "endless-sky",
     "rename-desktop-file": "endless-sky.desktop",
@@ -24,15 +24,14 @@
             ],
             "buildsystem": "simple",
             "build-commands": [
-                "sed -e 's/bdist_wheel/bdist/g' -i SConstruct",
-                "python3 scripts/scons.py --include-dir= -j1",
-                "python3 setup.py install --prefix=/app --skip-build --install-data=/app/share"
+                "cp -r ./ /app/scons"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/scons/scons/archive/4.1.0.tar.gz",
-                    "sha512": "f79b86bb09783767b3872cfb8efb665372714a604af2aaf3adc66eee63d3afe27bc6b2aab83813743c83f71c81c800d42842e916501787ba402ce2726dda9b44"
+                    "url": "https://github.com/SCons/scons/releases/download/4.4.0/scons-local-4.4.0.tar.gz",
+                    "sha512": "ca37e6cbdc56a7adb424d5a73d79d484094013ac103b05e7dcd3ca532f20d3c4c3436324cb139fffdaf0196501dea11e8358b3c3fc391b898d417b8b3cae8ff6",
+                    "strip-components": 0
                 }
             ]
         },
@@ -48,7 +47,7 @@
                 }
             },
             "build-commands": [
-                "CPPPATH=/app/include python3 /app/bin/scons PREFIX=/app install -j $FLATPAK_BUILDER_N_JOBS",
+                "CPPPATH=/app/include python3 /app/scons/scons.py PREFIX=/app install -j $FLATPAK_BUILDER_N_JOBS",
                 "install -Dm755 launcher /app/bin/endless-sky",
                 "install -Dm644 endless-sky.appdata.xml /app/share/metainfo/io.github.endless_sky.endless_sky.appdata.xml",
                 "mkdir -p /app/share/games/endless-sky/plugins/",
