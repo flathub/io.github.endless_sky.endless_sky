@@ -66,8 +66,8 @@
                 },
                 {
                     "type": "archive",
-                    "url": "https://github.com/endless-sky/endless-sky-high-dpi/archive/refs/tags/v0.9.16.tar.gz",
-                    "sha256": "f88e892e56910731eac14c108a406bfc05c5b72da2efa5c11b6598f1549f6480",
+                    "url": "https://github.com/endless-sky/endless-sky-high-dpi/archive/refs/tags/v0.9.16.1.tar.gz",
+                    "sha256": "1a8c7831ebc604021dab7cc1d9ed58aed58bdce9ee9f4568eb616cb8934dd0d8",
                     "dest": "endless-sky-high-dpi",
                     "x-checker-data": {
                         "type": "anitya",
