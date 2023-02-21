@@ -55,8 +55,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v0.9.16.1.tar.gz",
-                    "sha256": "a190da3827661f5ec979342cdcf0adc7183c703cecf91cb245a568ce6421b49b",
+                    "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v0.10.0.tar.gz",
+                    "sha256": "37a9d911b69a5a67b2b332ce4f99c51f52dc82dba4cd7281b7a3436d5c6f9541",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10359,
@@ -66,8 +66,8 @@
                 },
                 {
                     "type": "archive",
-                    "url": "https://github.com/endless-sky/endless-sky-high-dpi/archive/refs/tags/v0.9.16.1.tar.gz",
-                    "sha256": "1a8c7831ebc604021dab7cc1d9ed58aed58bdce9ee9f4568eb616cb8934dd0d8",
+                    "url": "https://github.com/endless-sky/endless-sky-high-dpi/archive/refs/tags/v0.10.0.tar.gz",
+                    "sha256": "1b15725893b7b5b964d3195088475306a21e25b7ea36f5778498606196eac0a7",
                     "dest": "endless-sky-high-dpi",
                     "x-checker-data": {
                         "type": "anitya",
