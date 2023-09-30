@@ -48,7 +48,7 @@
             },
             "build-commands": [
                 "CPPPATH=/app/include python3 /app/scons/scons.py PREFIX=/app install -j $FLATPAK_BUILDER_N_JOBS",
-                "install -Dm755 launcher /app/bin/endless-sky",
+                "install -Dm755 /app/games/endless-sky /app/bin/endless-sky",
                 "mkdir -p /app/share/games/endless-sky/plugins/",
                 "cp -r endless-sky-high-dpi /app/share/games/endless-sky/plugins/"
             ],
@@ -77,15 +77,12 @@
                     }
                 },
                 {
-                    "type": "script",
-                    "dest-filename": "launcher",
-                    "commands": [
-                        "exec /app/games/endless-sky -r /app/share/games/endless-sky"
-                    ]
+                    "type": "patch",
+                    "path": "fix-license.patch"
                 },
                 {
                     "type": "patch",
-                    "path": "fix-license.patch"
+                    "path": "fix-resources-search-path.patch"
                 }
             ]
         }
