@@ -17,10 +17,6 @@
         "io.github.endless_sky.endless_sky.plugins": {
             "directory": "share/games/endless-sky/plugins",
             "subdirectories": true
-        },
-        "io.github.endless_sky.endless_sky.plugins.endless-sky-high-dpi": {
-            "directory": "share/games/endless-sky/plugins/endless-sky-high-dpi",
-            "bundle": true
         }
     },
     "modules": [
