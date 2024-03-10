@@ -1,10 +1,9 @@
 {
     "id": "io.github.endless_sky.endless_sky",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "22.08",
+    "runtime-version": "23.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "endless-sky",
-    "rename-desktop-file": "endless-sky.desktop",
     "rename-icon": "endless-sky",
     "finish-args": [
         "--socket=pulseaudio",
@@ -54,15 +53,15 @@
             },
             "build-commands": [
                 "CPPPATH=/app/include python3 /app/scons/scons.py PREFIX=/app install -j $FLATPAK_BUILDER_N_JOBS",
-                "install -Dm755 launcher /app/bin/endless-sky",
+                "install -Dm755 /app/games/endless-sky /app/bin/endless-sky",
                 "mkdir -p /app/share/games/endless-sky/plugins/",
                 "cp -r endless-sky-high-dpi /app/share/games/endless-sky/plugins/"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v0.9.16.1.tar.gz",
-                    "sha256": "a190da3827661f5ec979342cdcf0adc7183c703cecf91cb245a568ce6421b49b",
+                    "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v0.10.6.tar.gz",
+                    "sha256": "2046daa1cf6bbd3a54675fa1f47fd60f5a1ee4db97ec7dd2eef64c8bceb7b706",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10359,
@@ -72,8 +71,8 @@
                 },
                 {
                     "type": "archive",
-                    "url": "https://github.com/endless-sky/endless-sky-high-dpi/archive/refs/tags/v0.9.16.1.tar.gz",
-                    "sha256": "1a8c7831ebc604021dab7cc1d9ed58aed58bdce9ee9f4568eb616cb8934dd0d8",
+                    "url": "https://github.com/endless-sky/endless-sky-high-dpi/archive/refs/tags/v0.10.6.tar.gz",
+                    "sha256": "c297e6278697ab62714d67e05b2acfb5283bc5fcab86d45bd606bb02d90c9a75",
                     "dest": "endless-sky-high-dpi",
                     "x-checker-data": {
                         "type": "anitya",
@@ -83,11 +82,8 @@
                     }
                 },
                 {
-                    "type": "script",
-                    "dest-filename": "launcher",
-                    "commands": [
-                        "exec /app/games/endless-sky -r /app/share/games/endless-sky"
-                    ]
+                    "type": "patch",
+                    "path": "fix-resources-search-path.patch"
                 }
             ]
         }
