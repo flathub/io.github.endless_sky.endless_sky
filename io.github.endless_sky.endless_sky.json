@@ -54,8 +54,7 @@
             "build-commands": [
                 "CPPPATH=/app/include python3 /app/scons/scons.py PREFIX=/app install -j $FLATPAK_BUILDER_N_JOBS",
                 "install -Dm755 /app/games/endless-sky /app/bin/endless-sky",
-                "mkdir -p /app/share/games/endless-sky/plugins/",
-                "cp -r endless-sky-high-dpi /app/share/games/endless-sky/plugins/"
+                "mkdir -p /app/share/games/endless-sky/plugins/"
             ],
             "sources": [
                 {
@@ -67,18 +66,6 @@
                         "project-id": 10359,
                         "stable-only": true,
                         "url-template": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v$version.tar.gz"
-                    }
-                },
-                {
-                    "type": "archive",
-                    "url": "https://github.com/endless-sky/endless-sky-high-dpi/archive/refs/tags/v0.10.6.tar.gz",
-                    "sha256": "c297e6278697ab62714d67e05b2acfb5283bc5fcab86d45bd606bb02d90c9a75",
-                    "dest": "endless-sky-high-dpi",
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 10359,
-                        "stable-only": true,
-                        "url-template": "https://github.com/endless-sky/endless-sky-high-dpi/archive/refs/tags/v$version.tar.gz"
                     }
                 },
                 {
