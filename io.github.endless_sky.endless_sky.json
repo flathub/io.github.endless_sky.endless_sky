@@ -12,6 +12,12 @@
         "--share=ipc",
         "--device=dri"
     ],
+    "add-extensions": {
+        "io.github.endless_sky.endless_sky.plugins": {
+            "directory": "share/games/endless-sky/plugins",
+            "subdirectories": true
+        }
+    },
     "modules": [
         "shared-modules/glu/glu-9.json",
         "shared-modules/glew/glew.json",
