@@ -24,36 +24,14 @@
         "shared-modules/glew/glew.json",
         "shared-modules/libmad/libmad.json",
         {
-            "name": "scons",
-            "cleanup": [
-                "*"
-            ],
-            "buildsystem": "simple",
-            "build-commands": [
-                "cp -r ./ /app/scons"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/SCons/scons/releases/download/4.4.0/scons-local-4.4.0.tar.gz",
-                    "sha512": "ca37e6cbdc56a7adb424d5a73d79d484094013ac103b05e7dcd3ca532f20d3c4c3436324cb139fffdaf0196501dea11e8358b3c3fc391b898d417b8b3cae8ff6",
-                    "strip-components": 0
-                }
-            ]
-        },
-        {
             "name": "endless-sky",
-            "buildsystem": "simple",
-            "build-options": {
-                "env": {
-                    "//": "These are needed for lto",
-                    "AR": "/usr/bin/gcc-ar",
-                    "NM": "/usr/bin/gcc-nm",
-                    "RANLIB": "/usr/bin/gcc-ranlib"
-                }
-            },
-            "build-commands": [
-                "CPPPATH=/app/include python3 /app/scons/scons.py PREFIX=/app install -j $FLATPAK_BUILDER_N_JOBS",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DBUILD_TESTING=OFF",
+                "-DES_USE_VCPKG=OFF"
+            ],
+            "post-install": [
                 "install -Dm755 /app/games/endless-sky /app/bin/endless-sky",
                 "mkdir -p /app/share/games/endless-sky/plugins/"
             ],
