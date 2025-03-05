@@ -7,10 +7,9 @@ index f5dec211..13f997e5 100644
                 // the executable, but are under the same prefix (/app or /app/local).
 -               static const filesystem::path LOCAL_PATH = "/usr/local/";
 -               static const filesystem::path STANDARD_PATH = "/usr/";
--               static const filesystem::path RESOURCE_PATH = "share/games/endless-sky/";
 +               static const filesystem::path LOCAL_PATH = "/app/local/";
 +               static const filesystem::path STANDARD_PATH = "/app/";
-+               static const filesystem::path RESOURCE_PATH = "/share/games/endless-sky/";
+                static const filesystem::path RESOURCE_PATH = "share/games/endless-sky/";
 
                 const auto IsParent = [](const auto parent, const auto child) -> bool {
                         if(distance(child.begin(), child.end()) < distance(parent.begin(), parent.end()))
