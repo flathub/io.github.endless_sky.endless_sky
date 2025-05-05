@@ -38,18 +38,14 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v0.10.12.tar.gz",
-                    "sha256": "8082124478e4eaf1e795fc044f6e540804eded095d91fd2ff6a658c0d905f60c",
+                    "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/continuous.tar.gz",
+                    "sha256": "ddb05230a5a4048e987b58de122d4a33b0186ea7",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10359,
                         "stable-only": true,
                         "url-template": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v$version.tar.gz"
                     }
-                },
-                {
-                    "type": "patch",
-                    "path": "use-trailing-slash.patch"
                 }
             ]
         }
