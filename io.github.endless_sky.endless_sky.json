@@ -39,7 +39,7 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/continuous.tar.gz",
-                    "sha256": "ddb05230a5a4048e987b58de122d4a33b0186ea7",
+                    "sha256": "00ae58e6f5a54a087385c3710191221cabe0d9ed764858fdc4cfcf4ce3afae84",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10359,
