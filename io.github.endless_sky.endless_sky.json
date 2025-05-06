@@ -46,6 +46,10 @@
                         "stable-only": true,
                         "url-template": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v$version.tar.gz"
                     }
+                },
+                {
+                    "type": "patch",
+                    "path": "use-app-not-usr-directory.patch"
                 }
             ]
         }

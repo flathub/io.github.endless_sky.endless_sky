@@ -1,0 +1,25 @@
+diff --git a/source/Files.cpp b/source/Files.cpp
+index f5dec211d..654ea2a5e 100644
+--- a/source/Files.cpp
++++ b/source/Files.cpp
+@@ -99,9 +99,10 @@ void Files::Init(const char * const *argv)
+ 
+ #if defined __linux__ || defined __FreeBSD__ || defined __DragonFly__
+ 		// Special case, for Linux: the resource files are not in the same place as
+-		// the executable, but are under the same prefix (/usr or /usr/local).
++		// the executable, but are under the same prefix (/usr or /usr/local or /app).
+ 		static const filesystem::path LOCAL_PATH = "/usr/local/";
+ 		static const filesystem::path STANDARD_PATH = "/usr/";
++		static const filesystem::path FLATHUB_PATH = "/app";
+ 		static const filesystem::path RESOURCE_PATH = "share/games/endless-sky/";
+ 
+ 		const auto IsParent = [](const auto parent, const auto child) -> bool {
+@@ -114,6 +115,8 @@ void Files::Init(const char * const *argv)
+ 			resources = LOCAL_PATH / RESOURCE_PATH;
+ 		else if(IsParent(STANDARD_PATH, resources))
+ 			resources = STANDARD_PATH / RESOURCE_PATH;
++		else if(IsParent(FLATHUB_PATH, resources))
++			resources = FLATHUB_PATH / RESOURCE_PATH;
+ #endif
+ 	}
+ 	// If the resources are not here, search in the directories containing this
