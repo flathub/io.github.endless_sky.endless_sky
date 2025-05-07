@@ -23,6 +23,8 @@
         "shared-modules/glu/glu-9.json",
         "shared-modules/glew/glew.json",
         "shared-modules/libmad/libmad.json",
+		"zlib/zlib.json",
+		"minizip/minizip.json",
         {
             "name": "endless-sky",
             "buildsystem": "cmake-ninja",
