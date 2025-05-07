@@ -9,10 +9,6 @@
             "type": "archive",
             "url": "https://github.com/domoticz/minizip/archive/refs/heads/master.zip",
             "sha256": "abec636846ed9cbe455f5108a3ab8bf77262e4e067d1d345cee7c34805c4486b"
-        },
-        {
-            "type": "file",
-            "path": "CMakeLists.txt"
-		}
+        }
     ]
 }

@@ -9,10 +9,6 @@
             "type": "archive",
             "url": "https://github.com/madler/zlib/archive/refs/heads/develop.zip",
             "sha256": "c0730d9373d37ff23183e1d079dfd2bb840ba78f564562d474d39886e23aec19"
-        },
-        {
-            "type": "file",
-            "path": "CMakeLists.txt"
-		}
+        }
     ]
 }
