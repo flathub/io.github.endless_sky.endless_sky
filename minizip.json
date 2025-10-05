@@ -1,6 +1,6 @@
 {
   "name": "minizip",
-  "subdir": "contrib/minizip",
+  "builddir": "contrib/minizip",
   "buildsystem": "cmake-ninja",
   "sources": [
     {
@@ -9,5 +9,10 @@
       "tag": "v1.3.1",
       "commit": "51b7f2abdade71cd9bb0e7a373ef2610ec6f9daf"
     }
+  ]
+  "cleanup": [
+    "/include",
+    "/lib/pkgconfig",
+    "/lib/*.a"
   ]
 }
