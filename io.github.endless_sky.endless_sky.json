@@ -1,7 +1,7 @@
 {
     "id": "io.github.endless_sky.endless_sky",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "25.08",
+    "runtime-version": "23.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "endless-sky",
     "rename-icon": "endless-sky",
