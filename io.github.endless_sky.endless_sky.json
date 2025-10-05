@@ -23,6 +23,7 @@
         "shared-modules/glu/glu-9.json",
         "shared-modules/glew/glew.json",
         "shared-modules/libmad/libmad.json",
+		"minizip.json",
         {
             "name": "endless-sky",
             "buildsystem": "cmake-ninja",
@@ -38,8 +39,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v0.10.12.tar.gz",
-                    "sha256": "8082124478e4eaf1e795fc044f6e540804eded095d91fd2ff6a658c0d905f60c",
+                    "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v0.10.13.tar.gz",
+                    "sha256": "afcaada76eb7a6dd2ac7483f186155b46a18c8406bff80761b511d7618879cc0",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10359,
