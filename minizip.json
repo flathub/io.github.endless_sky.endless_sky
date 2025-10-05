@@ -1,6 +1,6 @@
 {
   "name": "minizip",
-  "subdir": "contrib/minizip"
+  "subdir": "contrib/minizip",
   "sources": [
     {
       "type": "git",
