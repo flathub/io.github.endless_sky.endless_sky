@@ -1,5 +1,6 @@
 {
-  "name": "zlib",
+  "name": "minizip",
+  "subdir", "contrib/minizip"
   "sources": [
     {
       "type": "git",
