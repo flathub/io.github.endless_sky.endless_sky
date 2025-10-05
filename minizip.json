@@ -1,0 +1,13 @@
+{
+  "name": "minizip",
+  "subdir": "contrib/minizip",
+  "buildsystem": "cmake-ninja",
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/madler/zlib.git",
+      "tag": "v1.3.1",
+      "commit": "51b7f2abdade71cd9bb0e7a373ef2610ec6f9daf"
+    }
+  ]
+}
