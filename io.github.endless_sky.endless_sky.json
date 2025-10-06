@@ -24,6 +24,7 @@
         "shared-modules/glew/glew.json",
         "shared-modules/libmad/libmad.json",
 		"minizip.json",
+		"libavif.json",
         {
             "name": "endless-sky",
             "buildsystem": "cmake-ninja",
@@ -39,8 +40,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v0.10.14.tar.gz",
-                    "sha256": "8e07349b7d33645f726efbb5fbe900a9f8c084084d4c8dea7d9165341e43eb6d",
+                    "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v0.10.15.tar.gz",
+                    "sha256": "d6a8e901dc311d78077fd1a6a8faff77f386632c4650f76bee3daa4496e4c4f6",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10359,
@@ -51,7 +52,11 @@
                 {
                     "type": "patch",
                     "path": "use-app-not-usr-directory.patch"
-                }
+                },
+				{
+					"type": "patch",
+					"path": "flac-compilation-fixes.patch"
+				}
             ]
         }
     ]
