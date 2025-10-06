@@ -52,7 +52,11 @@
                 {
                     "type": "patch",
                     "path": "use-app-not-usr-directory.patch"
-                }
+                },
+				{
+					"type": "patch",
+					"path": "flac-compilation-fixes.patch"
+				}
             ]
         }
     ]
