@@ -4,7 +4,6 @@
     "runtime-version": "23.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "endless-sky",
-    "rename-desktop-file": "endless-sky.desktop",
     "rename-icon": "endless-sky",
     "finish-args": [
         "--socket=pulseaudio",
@@ -13,50 +12,35 @@
         "--share=ipc",
         "--device=dri"
     ],
+    "add-extensions": {
+        "io.github.endless_sky.endless_sky.plugins": {
+            "directory": "share/games/endless-sky/plugins",
+            "subdirectories": true,
+            "no-autodownload": true
+        }
+    },
     "modules": [
         "shared-modules/glu/glu-9.json",
         "shared-modules/glew/glew.json",
         "shared-modules/libmad/libmad.json",
-        {
-            "name": "scons",
-            "cleanup": [
-                "*"
-            ],
-            "buildsystem": "simple",
-            "build-commands": [
-                "cp -r ./ /app/scons"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/SCons/scons/releases/download/4.4.0/scons-local-4.4.0.tar.gz",
-                    "sha512": "ca37e6cbdc56a7adb424d5a73d79d484094013ac103b05e7dcd3ca532f20d3c4c3436324cb139fffdaf0196501dea11e8358b3c3fc391b898d417b8b3cae8ff6",
-                    "strip-components": 0
-                }
-            ]
-        },
+		"minizip.json",
         {
             "name": "endless-sky",
-            "buildsystem": "simple",
-            "build-options": {
-                "env": {
-                    "//": "These are needed for lto",
-                    "AR": "/usr/bin/gcc-ar",
-                    "NM": "/usr/bin/gcc-nm",
-                    "RANLIB": "/usr/bin/gcc-ranlib"
-                }
-            },
-            "build-commands": [
-                "CPPPATH=/app/include python3 /app/scons/scons.py PREFIX=/app install -j $FLATPAK_BUILDER_N_JOBS",
-                "install -Dm755 launcher /app/bin/endless-sky",
-                "mkdir -p /app/share/games/endless-sky/plugins/",
-                "cp -r endless-sky-high-dpi /app/share/games/endless-sky/plugins/"
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DBUILD_TESTING=OFF",
+                "-DES_USE_VCPKG=OFF"
+            ],
+            "post-install": [
+                "install -Dm755 /app/games/endless-sky /app/bin/endless-sky",
+                "mkdir -p /app/share/games/endless-sky/plugins/"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v0.10.3.tar.gz",
-                    "sha256": "16c9dca00edc5b2064fc73834f7c45bf7220ffbd19b94834dbcf81eedca28b35",
+                    "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v0.10.14.tar.gz",
+                    "sha256": "8e07349b7d33645f726efbb5fbe900a9f8c084084d4c8dea7d9165341e43eb6d",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10359,
@@ -65,23 +49,8 @@
                     }
                 },
                 {
-                    "type": "archive",
-                    "url": "https://github.com/endless-sky/endless-sky-high-dpi/archive/refs/tags/v0.10.3.tar.gz",
-                    "sha256": "2beb0bb2ba3cce70023ec27c4b55015ec33ee8d609ccf7d567d65b7b6da8c58b",
-                    "dest": "endless-sky-high-dpi",
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 10359,
-                        "stable-only": true,
-                        "url-template": "https://github.com/endless-sky/endless-sky-high-dpi/archive/refs/tags/v$version.tar.gz"
-                    }
-                },
-                {
-                    "type": "script",
-                    "dest-filename": "launcher",
-                    "commands": [
-                        "exec /app/games/endless-sky -r /app/share/games/endless-sky"
-                    ]
+                    "type": "patch",
+                    "path": "use-app-not-usr-directory.patch"
                 }
             ]
         }
