@@ -1,6 +1,7 @@
 {
   "name": "libavif",
   "buildsystem": "cmake-ninja",
+  "config-opts": ["-DAVIF_LIBYUV=LOCAL"],
   "sources": [
     {
       "type": "git",
