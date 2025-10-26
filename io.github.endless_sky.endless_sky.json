@@ -24,6 +24,7 @@
         "shared-modules/glew/glew.json",
         "shared-modules/libmad/libmad.json",
         "minizip.json",
+        "libavif.json",
         {
             "name": "endless-sky",
             "buildsystem": "cmake-ninja",
