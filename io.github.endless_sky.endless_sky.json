@@ -40,8 +40,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v0.10.15.tar.gz",
-                    "sha256": "d6a8e901dc311d78077fd1a6a8faff77f386632c4650f76bee3daa4496e4c4f6",
+                    "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v0.10.16.tar.gz",
+                    "sha256": "8854c676e45dc38ef8e0b0ed28b20213027db055c596495e09e6583ee37e8782",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10359,
@@ -52,12 +52,8 @@
                 {
                     "type": "patch",
                     "path": "use-app-not-usr-directory.patch"
-                },
-				{
-					"type": "patch",
-					"path": "flac-compilation-fixes.patch"
-				}
-            ]
+                }
+			]
         }
     ]
 }
