@@ -53,6 +53,7 @@
                     "type": "patch",
                     "path": "use-app-not-usr-directory.patch"
                 }
+			]
         }
     ]
 }
