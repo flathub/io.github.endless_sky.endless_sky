@@ -1,0 +1,19 @@
+{
+  "name": "libavif",
+  "buildsystem": "cmake-ninja",
+  "config-opts": ["-DAVIF_LIBYUV=LOCAL"],
+  "sources": [
+    {
+      "type": "git",
+      "url": "https://github.com/AOMediaCodec/libavif",
+      "tag": "v1.1.1",
+      "commit": "bb24db03cd99befe09c87b602e36f24d75a980d1"
+    },
+    {
+      "type": "git",
+      "url": "https://chromium.googlesource.com/libyuv/libyuv",
+      "commit": "4db2af62d",
+	  "dest": "ext/libyuv"
+    }
+  ]
+}
