@@ -1,14 +1,13 @@
 {
     "id": "io.github.endless_sky.endless_sky",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "23.08",
+    "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "endless-sky",
     "rename-icon": "endless-sky",
     "finish-args": [
         "--socket=pulseaudio",
-        "--socket=wayland",
-        "--socket=fallback-x11",
+        "--socket=x11",
         "--share=ipc",
         "--device=dri"
     ],
@@ -23,8 +22,7 @@
         "shared-modules/glu/glu-9.json",
         "shared-modules/glew/glew.json",
         "shared-modules/libmad/libmad.json",
-		"minizip.json",
-		"libavif.json",
+        "minizip.json",
         {
             "name": "endless-sky",
             "buildsystem": "cmake-ninja",
