@@ -41,9 +41,8 @@
                     "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v0.10.16.tar.gz",
                     "sha256": "8854c676e45dc38ef8e0b0ed28b20213027db055c596495e09e6583ee37e8782",
                     "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 10359,
-                        "stable-only": true,
+                        "type": "git",
+                        "tag-pattern": "^v([\\d]+\\.[\\d]+\\.(?:\\d*[2468])(?:\\.\\d+)?)$",
                         "url-template": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v$version.tar.gz"
                     }
                 },
