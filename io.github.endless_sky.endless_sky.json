@@ -38,8 +38,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v0.11.3.tar.gz",
-                    "sha256": "2c3b887ca0c4d856566ce5be3d529ad1a28540ba254cee1a540dae4e8d638c07",
+                    "url": "https://github.com/endless-sky/endless-sky/archive/refs/tags/v0.11.4.tar.gz",
+                    "sha256": "971399cc91956171261f5a36429572201a35662db2b1d3615fd6043ee4a38a61",
 					"x-checker-data": {
                         "type": "anitya",
                         "project-id": 10359,
